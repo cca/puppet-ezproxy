@@ -44,6 +44,9 @@
 # [*ssl*]
 #   Boolean for whether or not to accept SSL connections.
 #
+# [*disable_sslv2*]
+#   Boolean for whether or not to disable SSLv2
+#
 # [*https_login*]
 #   Boolean for whether or not to force logins through SSL.
 #
@@ -145,6 +148,7 @@ class ezproxy (
   $reject_ips               = $::ezproxy::params::reject_ips,
   $login_port               = $::ezproxy::params::login_port,
   $ssl                      = $::ezproxy::params::ssl,
+  $disable_sslv2            = $::ezproxy::params::disable_sslv2,
   $https_login              = $::ezproxy::params::https_login,
   $https_admin              = $::ezproxy::params::https_admin,
   $max_lifetime             = $::ezproxy::params::max_lifetime,
@@ -209,6 +213,7 @@ class ezproxy (
   }
   validate_string($login_port)
   validate_bool($ssl)
+  validate_bool($disable_sslv2)
   validate_bool($https_login)
   validate_bool($https_admin)
   validate_string($max_lifetime)
