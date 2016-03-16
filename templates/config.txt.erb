@@ -62,6 +62,9 @@ Option ForceHTTPSLogin
 <% end -%>
 <% if @https_admin -%>
 Option ForceHTTPSAdmin
+<% if @disable_sslv2 -%>
+Option DisableSSLv2
+
 <% end -%>
 <% end -%>
 
