@@ -132,6 +132,7 @@ describe 'ezproxy' do
         'reject_ips'        => [ '7.0.0.0-7.255.255.255', '8.0.0.0-8.255.255.255' ],
         'login_port'        => '8080',
         'ssl'               => true,
+        'disable_sslv2'     => true,
         'https_login'       => true,
         'https_admin'       => true,
         'max_lifetime'      => '360',
