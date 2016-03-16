@@ -17,6 +17,7 @@ class ezproxy::params {
   $reject_ips               = []
   $login_port               = '80'
   $ssl                      = false
+  $disable_sslv2            = false
   $https_login              = false
   $https_admin              = false
   $max_lifetime             = '120'
